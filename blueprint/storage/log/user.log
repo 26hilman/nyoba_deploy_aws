@@ -1,0 +1,151 @@
+[2019-02-19 17:13:09,532] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again."}}
+[2019-02-19 17:13:12,410] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": [{"id": 0, "name": "fatma", "age": 32, "sex": "male", "client_id": 0}, {"id": 1, "name": "aswin", "age": 47, "sex": "female", "client_id": 1}, {"id": 2, "name": "aswin", "age": 36, "sex": "female", "client_id": 2}, {"id": 3, "name": "hilman", "age": 58, "sex": "female", "client_id": 3}, {"id": 4, "name": "fatma", "age": 54, "sex": "male", "client_id": 4}, {"id": 5, "name": "aswin", "age": 77, "sex": "male", "client_id": 5}, {"id": 6, "name": "aswin", "age": 20, "sex": "female", "client_id": 6}, {"id": 7, "name": "fatma", "age": 19, "sex": "female", "client_id": 7}, {"id": 8, "name": "fatma", "age": 33, "sex": "male", "client_id": 8}, {"id": 9, "name": "aswin", "age": 43, "sex": "female", "client_id": 9}, {"id": 10, "name": "fatma", "age": 60, "sex": "female", "client_id": 10}, {"id": 11, "name": "hilman", "age": 56, "sex": "male", "client_id": 11}, {"id": 12, "name": "fatma", "age": 12, "sex": "female", "client_id": 12}, {"id": 13, "name": "hilman", "age": 53, "sex": "male", "client_id": 13}, {"id": 14, "name": "hilman", "age": 45, "sex": "female", "client_id": 14}]}
+[2019-02-19 17:13:20,451] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": [{"id": 0, "name": "fatma", "age": 32, "sex": "male", "client_id": 0}, {"id": 1, "name": "aswin", "age": 47, "sex": "female", "client_id": 1}, {"id": 2, "name": "aswin", "age": 36, "sex": "female", "client_id": 2}, {"id": 3, "name": "hilman", "age": 58, "sex": "female", "client_id": 3}, {"id": 4, "name": "fatma", "age": 54, "sex": "male", "client_id": 4}, {"id": 5, "name": "aswin", "age": 77, "sex": "male", "client_id": 5}, {"id": 6, "name": "aswin", "age": 20, "sex": "female", "client_id": 6}, {"id": 7, "name": "fatma", "age": 19, "sex": "female", "client_id": 7}, {"id": 8, "name": "fatma", "age": 33, "sex": "male", "client_id": 8}, {"id": 9, "name": "aswin", "age": 43, "sex": "female", "client_id": 9}, {"id": 10, "name": "fatma", "age": 60, "sex": "female", "client_id": 10}, {"id": 11, "name": "hilman", "age": 56, "sex": "male", "client_id": 11}, {"id": 12, "name": "fatma", "age": 12, "sex": "female", "client_id": 12}, {"id": 13, "name": "hilman", "age": 53, "sex": "male", "client_id": 13}, {"id": 14, "name": "hilman", "age": 45, "sex": "female", "client_id": 14}]}
+[2019-02-19 17:13:23,699] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user/1 [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'user_id'
+[2019-02-19 17:13:23,701] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:02,364] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:02,367] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:05,191] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:05,191] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:05,685] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:05,686] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:06,388] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:06,389] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:07,294] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:07,295] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:15:58,296] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user/1 [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:15:58,297] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:16:57,667] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:16:57,669] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:17:00,776] {/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /user/1 [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/rest_training/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/rest_training/rest_svc/User/blueprint/user/resources.py", line 18, in get
+    if client_id == None :
+NameError: name 'client_id' is not defined
+[2019-02-19 17:17:00,778] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"message": "Internal Server Error"}}
+[2019-02-19 17:19:52,100] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": [{"id": 0, "name": "aswin", "age": 58, "sex": "male", "client_id": 0}, {"id": 1, "name": "fatma", "age": 11, "sex": "female", "client_id": 1}, {"id": 2, "name": "aswin", "age": 1, "sex": "female", "client_id": 2}, {"id": 3, "name": "aswin", "age": 32, "sex": "female", "client_id": 3}, {"id": 4, "name": "hilman", "age": 11, "sex": "male", "client_id": 4}, {"id": 5, "name": "hilman", "age": 22, "sex": "male", "client_id": 5}, {"id": 6, "name": "hilman", "age": 77, "sex": "male", "client_id": 6}, {"id": 7, "name": "fatma", "age": 52, "sex": "male", "client_id": 7}, {"id": 8, "name": "aswin", "age": 43, "sex": "male", "client_id": 8}, {"id": 9, "name": "aswin", "age": 33, "sex": "female", "client_id": 9}, {"id": 10, "name": "aswin", "age": 42, "sex": "female", "client_id": 10}, {"id": 11, "name": "hilman", "age": 40, "sex": "male", "client_id": 11}, {"id": 12, "name": "fatma", "age": 20, "sex": "female", "client_id": 12}, {"id": 13, "name": "fatma", "age": 51, "sex": "female", "client_id": 13}, {"id": 14, "name": "aswin", "age": 68, "sex": "female", "client_id": 14}]}
+[2019-02-19 17:19:55,307] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"id": 1, "name": "fatma", "age": 11, "sex": "female", "client_id": 1}}
+[2019-02-19 17:20:15,932] {user.py:16} WARNING - REQUEST LOG	POST {"request": {"id": 100, "name": "fatma post", "age": 11, "sex": "female", "client_id": 100}, "response": {"id": 100, "name": "fatma post", "age": "11", "sex": "female", "client_id": 100}}
+[2019-02-19 17:20:20,674] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": [{"id": 0, "name": "aswin", "age": 58, "sex": "male", "client_id": 0}, {"id": 1, "name": "fatma", "age": 11, "sex": "female", "client_id": 1}, {"id": 2, "name": "aswin", "age": 1, "sex": "female", "client_id": 2}, {"id": 3, "name": "aswin", "age": 32, "sex": "female", "client_id": 3}, {"id": 4, "name": "hilman", "age": 11, "sex": "male", "client_id": 4}, {"id": 5, "name": "hilman", "age": 22, "sex": "male", "client_id": 5}, {"id": 6, "name": "hilman", "age": 77, "sex": "male", "client_id": 6}, {"id": 7, "name": "fatma", "age": 52, "sex": "male", "client_id": 7}, {"id": 8, "name": "aswin", "age": 43, "sex": "male", "client_id": 8}, {"id": 9, "name": "aswin", "age": 33, "sex": "female", "client_id": 9}, {"id": 10, "name": "aswin", "age": 42, "sex": "female", "client_id": 10}, {"id": 11, "name": "hilman", "age": 40, "sex": "male", "client_id": 11}, {"id": 12, "name": "fatma", "age": 20, "sex": "female", "client_id": 12}, {"id": 13, "name": "fatma", "age": 51, "sex": "female", "client_id": 13}, {"id": 14, "name": "aswin", "age": 68, "sex": "female", "client_id": 14}, {"id": 100, "name": "fatma post", "age": "11", "sex": "female", "client_id": 100}]}
+[2019-02-19 17:20:45,592] {user.py:16} WARNING - REQUEST LOG	PUT {"request": {"id": 2, "name": "fatma nyoba put", "age": 11, "sex": "female", "client_id": 2}, "response": {"id": 2, "name": "fatma nyoba put", "age": "11", "sex": "female", "client_id": 2}}
+[2019-02-19 17:20:48,928] {user.py:14} WARNING - REQUEST LOG	GET {"request": {}, "response": {"id": 2, "name": "fatma nyoba put", "age": "11", "sex": "female", "client_id": 2}}
