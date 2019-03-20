@@ -20,5 +20,6 @@ if __name__ == '__main__':
 
 
 #komen ini hanyalah komentar
+#sadsadsadsadsadsadsadsad
 
     
