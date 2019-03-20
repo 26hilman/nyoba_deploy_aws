@@ -10,8 +10,7 @@ env:
 
 
 before_script:
-- openssl aes-256-cbc -K $encrypted_b6b313b31e34_key -iv $encrypted_b6b313b31e34_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
+- openssl aes-256-cbc -K $encrypted_b6b313b31e34_key -iv $encrypted_b6b313b31e34_iv -in deploy_rsa.enc -out deploy_rsa -d
 - eval "$(ssh-agent -s)"
 - sudo chmod 600 deploy_rsa
 - ssh-add deploy_rsa
