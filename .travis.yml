@@ -4,9 +4,9 @@ services:
 os:
 - linux
 env:
- global:
-- DOCKER_IMAGE_NAME="nyoba_deploy_aws"
-- DOCKER_HUB_ORG="hilmanyr"
+  global:
+  - DOCKER_IMAGE_NAME="nyoba_deploy_aws"
+  - DOCKER_HUB_ORG="hilmanyr"
 
 
 before_script:
