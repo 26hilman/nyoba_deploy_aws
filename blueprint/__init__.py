@@ -12,7 +12,7 @@ app = Flask(__name__)
 # Pengaturan database ditauh dibawah app = Flask(__name__) !!!!!!!!!!!!!!!
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:masukaja@127.0.0.1/book'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@0.0.0.0:3306/API'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://hilman:password@172.31.27.56:3306/API'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'SADASsadsadsadsadSADsafaSAdsa0921'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
