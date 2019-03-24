@@ -9,10 +9,8 @@ from datetime import timedelta
 
 app = Flask(__name__)
 
-# Pengaturan database ditauh dibawah app = Flask(__name__) !!!!!!!!!!!!!!!
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:masukaja@127.0.0.1/book'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://hilman:password@172.31.27.56:3306/API'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@api.clclkjmy7ppm.ap-southeast-1.rds.amazonaws.com/Portofolio_API'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'SADASsadsadsadsadSADsafaSAdsa0921'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
@@ -40,18 +38,18 @@ def after_request(response):
     return response
 
 ## call blueprint
-from blueprint.user.resources import bp_user
-from blueprint.book.resources import bp_buku
-from blueprint.client.resources import bp_client
-from blueprint.rent.resources import bp_rent
-from blueprint.auth.__init__ import bp_auth
-
+from blueprint.user.user import bp_user
+from blueprint.mobil.mobil import bp_mobil
+from blueprint.testimoni.testimoni import bp_testimoni
+from blueprint.kontak_kami.kontak import bp_kontakkami
+from blueprint.forum.forum import bp_forum
 
 app.register_blueprint(bp_user)
-app.register_blueprint(bp_buku)
-app.register_blueprint(bp_client)
-app.register_blueprint(bp_rent)
-app.register_blueprint(bp_auth)
+app.register_blueprint(bp_mobil)
+app.register_blueprint(bp_testimoni)
+app.register_blueprint(bp_kontakkami)
+app.register_blueprint(bp_forum)
+
 
 db.create_all()
 
