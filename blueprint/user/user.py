@@ -127,7 +127,7 @@ class UserLoginResource(Resource):
     def __init__(self):
         pass
     
-    def get(self):
+    def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('username', location='json', required=True)
         parser.add_argument('password', location='json', required=True)
